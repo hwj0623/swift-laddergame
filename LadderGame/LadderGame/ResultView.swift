@@ -23,22 +23,20 @@ struct ResultView {
     }
     
     private func convertNameFormat(_ player: LadderPlayer) -> String{
-        let nameLength = player.nameLength
-        let name = player.name
         var printedName: String = ""
-        switch nameLength{
+        switch player.nameLength{
         case 1:
-            printedName = "  "+name+"  "
+            printedName = "  "+player.name+"  "
         case 2:
-            printedName = "  "+name+" "
+            printedName = "  "+player.name+" "
         case 3:
-            printedName = " "+name+" "
+            printedName = " "+player.name+" "
         case 4:
-            printedName = name+" "
+            printedName = player.name+" "
         case 5:
-            printedName = name
+            printedName = player.name
         default:
-            printedName = name
+            printedName = player.name
         }
         return printedName
     }
